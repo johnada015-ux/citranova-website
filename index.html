@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CitraNova</title>
+
+<style>
+/* RESET */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: Arial, sans-serif; background:#0f0f0f; color:white; scroll-behavior:smooth; }
+a { text-decoration:none; color:white; }
+
+/* NAVBAR */
+nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px;
+  background:rgba(0,0,0,0.6);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+.logo { font-size:1.8em; font-weight:bold; }
+.menu a { margin-left:20px; transition:0.3s; }
+.menu a:hover { color:#f5a623; }
+
+/* HERO */
+.hero {
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  min-height:90vh;
+  background:url('hero-juice.jpg') center/cover no-repeat;
+}
+.hero::before {
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background:rgba(0,0,0,0.5);
+}
+.hero h1, .hero p, .hero a {
+  position:relative;
+  z-index:1;
+}
+.hero h1 {
+  font-size:3em;
+  margin-bottom:15px;
+}
+.hero p {
+  color:#f5a623;
+  margin-bottom:25px;
+}
+.btn {
+  padding:12px 25px;
+  background:#f5a623;
+  color:#0f0f0f;
+  border-radius:30px;
+  font-weight:bold;
+  transition:0.3s;
+}
+.btn:hover {
+  background:#ffa500;
+  transform:scale(1.05);
+}
+
+/* PRODUCTS */
+.products {
+  padding:60px 20px;
+  text-align:center;
+}
+.products h2 {
+  margin-bottom:30px;
+}
+.product-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+}
+.product-card {
+  background:rgba(255,255,255,0.05);
+  padding:15px;
+  border-radius:15px;
+  transition:0.3s;
+}
+.product-card:hover {
+  transform:scale(1.05);
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+.product-card img {
+  width:100%;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+/* ABOUT */
+.about {
+  padding:60px 20px;
+  background:rgba(255,255,255,0.05);
+  text-align:center;
+}
+.about p {
+  max-width:600px;
+  margin:auto;
+  line-height:1.6;
+}
+
+/* CONTACT */
+.contact {
+  padding:60px 20px;
+  text-align:center;
+}
+.contact p {
+  margin:10px 0;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:20px;
+  background:rgba(0,0,0,0.6);
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .hero h1 { font-size:2em; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">CitraNova</div>
+  <div class="menu">
+    <a href="#hero">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <h1>Refresh Your World Naturally</h1>
+  <p>Premium citrus beverages for a vibrant life</p>
+  <a href="#products" class="btn">Explore Products</a>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <h2>Our Products</h2>
+
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img src="orange-juice.jpg">
+      <h3>Orange Citrus</h3>
+      <p>Freshly squeezed orange goodness.</p>
+    </div>
+
+    <div class="product-card">
+      <img src="lemon-juice.jpg">
+      <h3>Lemon Zest</h3>
+      <p>Bright and refreshing lemon flavor.</p>
+    </div>
+
+    <div class="product-card">
+      <img src="mixed-fruit.jpg">
+      <h3>Mixed Fruit</h3>
+      <p>A blend of tropical fruits.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <h2>About CitraNova</h2>
+  <p>
+    CitraNova delivers premium natural citrus drinks designed to refresh your body and energize your lifestyle.
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <p>📞 +234 800 123 4567</p>
+  <p>📧 hello@citranova.com</p>
+  <p>💬 WhatsApp: +234 900 123 4567</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 CitraNova. All rights reserved.
+</footer>
+
+</body>
+</html>
